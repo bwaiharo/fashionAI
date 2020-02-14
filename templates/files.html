@@ -14,9 +14,63 @@
     <title>S3 Object List</title>
   </head>
   <body>
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="#">ShopEasy</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+          aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+​
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/files">Visuals</a>
+            </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/jsonData">JSON DATA</a>
+            </li>
+           
+              <li class="nav-item">
+                  <a target="#_blank" href="https://github.com/bwaiharo/fashionAI" style="padding-right:20px">
+                      <img width="25px" src="../static/images/github2.svg">
+                  </a>
+​
+              </li>
+          </ul>
+​
+      </div>
+  </nav>
+
     <h1>AWS S3 Bucket Files!</h1>
 
     <div class="container">
+      {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <p class="bg-info" style="padding: 15px;">
+        {% for message in messages %}
+          {{ message }}<br>
+        {% endfor %}
+        </p>
+      {% endif %}
+    {% endwith %}
+    <div class="row">
+      <div class="col">
+        <img width="480px" src="../static/images/bar.png">
+      </div>
+      <div class="col">
+        <img  src="../static/images/deb.png">
+      </div>
+      <div class="col">
+        <img  src="../static/images/cluster_mastercat.png">
+      </div>
+      <div class="col">
+        <img  src="../static/images/cluster_subcat.png">
+      </div>
+
+    </div>
         <div class="col-12-xs">
           <h3>Bucket Info</h3>
           <p>Created: {{ my_bucket.creation_date | datetimeformat }}</p>

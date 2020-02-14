@@ -1,0 +1,25 @@
+[
+    {
+        "Item_Name": [
+            "Women's Faux Persian Fur Coat by White House ...",
+            "Henig Furs Full Length Mink Fur Coat with ...",
+            "Henig Furs Full Length Canadian Lynx Fur Coat | L"
+        ],
+        "Item_Price": [
+            "$119.99",
+            "$999.00",
+            "$4,999.00"
+        ],
+        "Item_Store": [
+            "White House Black Market",
+            "Henig Furs",
+            "Henig Furs"
+        ],
+        "Item_URL": [
+            "https://www.google.com/aclk?sa=l&ai=DChcSEwi3qIDn0s_nAhXBklsKHcxSDHkYABAHGgJ5bQ&sig=AOD64_0_G1-GNR38FHaVZYSZwtau7Gbbkw&ctype=5&rct=j&q=&ved=0ahUKEwjKp_vm0s_nAhXZUs0KHZ6TCloQg-UECPsD&adurl=",
+            "https://www.google.com/aclk?sa=l&ai=DChcSEwi3qIDn0s_nAhXBklsKHcxSDHkYABAFGgJ5bQ&sig=AOD64_0iArQTrl5JXd3m8zOYABhWuMWy8w&ctype=5&rct=j&q=&ved=0ahUKEwjKp_vm0s_nAhXZUs0KHZ6TCloQg-UECIIE&adurl=",
+            "https://www.google.com/aclk?sa=l&ai=DChcSEwi3qIDn0s_nAhXBklsKHcxSDHkYABAGGgJ5bQ&sig=AOD64_3k1n9_vl2H4JfZ8pr9CD48d6H8cg&ctype=5&rct=j&q=&ved=0ahUKEwjKp_vm0s_nAhXZUs0KHZ6TCloQg-UECIkE&adurl="
+        ],
+        "Prediction": "fur_coat"
+    }
+]
