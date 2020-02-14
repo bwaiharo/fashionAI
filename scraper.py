@@ -1,25 +1,18 @@
 from bs4 import BeautifulSoup
 import requests
 from splinter import Browser
-import pandas as pd
+
 from pprint import pprint
 import re
-from ai_model import predict
+# from ai_model import predict
 import json
-
-
-def ai_ml(p):
-    pipi = predict(p)
-    # print(pipi['Predicted0'])
-    return pipi['Predicted'][0]
-
-top_pred = ai_ml('https://mushroommushroomboomboom.s3.us-east-2.amazonaws.com/shirt5.jfif')
+import boto3
 
 
 def init_browser():
     # @NOTE: Replace the path with your actual path to the chromedriver
     executable_path = {'executable_path': 'chromedriver'}
-    return Browser("chrome", **executable_path, headless=False)
+    return Browser("chrome", **executable_path, headless=True)
     # browser = Browser('chrome', **executable_path, headless=False)
 
 def scrape_info(si):
@@ -66,16 +59,12 @@ def scrape_info(si):
     browser.quit()
 
 
-    item_description = {si:
-                    {'Item_Name':item_n,
-                   'Item_URL': item_l,
-                   'Item_Price': item_p,
-                   'Item_Store': item_s}}
+    item_description = {'Item_Name':item_n[:3],
+                     'Item_URL': item_l[:3],
+                     'Item_Price': item_p[:3],
+                     'Item_Store': item_s[:3],
+                     'Prediction': si}
+                      
+                    
     
     return item_description
-
-data = scrape_info(top_pred)
-
-
-with open('data.json', 'a', encoding='utf-8') as f:
-    json.dump(data, f, ensure_ascii=False, indent=4)

@@ -15,16 +15,14 @@ from tensorflow.keras.applications.vgg19 import (
     decode_predictions
 )
 
-model = VGG19(include_top=True, weights='imagenet')
-
-image_size = (224, 224)
-
-# Refactor above steps into reusable function
 pred = []
 acc = []
 pred_accuracy = dict()
 def predict(image_path):
     """Use VGG19 to label image"""
+    pred = [] 
+    acc = [] 
+    model = VGG19(include_top=True, weights='imagenet')
     img = image.load_img(urllib.request.urlopen(image_path), target_size=(224, 224))
     x = image.img_to_array(img)
     x = np.expand_dims(x, axis=0)
@@ -41,5 +39,4 @@ def predict(image_path):
                 
     return pred_accuracy
 
-# predict('https://mushroommushroomboomboom.s3.us-east-2.amazonaws.com/shirt2.jfif')
 
